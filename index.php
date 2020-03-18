@@ -11,7 +11,7 @@
         <div class="wrapper">
             <div class="content">
                 <header>
-                    <?php include('nav.php') ?>
+                    <?php include('nav.html') ?>
                     <a class="button-signin" href="signin.php"><button>Войти</button></a>    
                 </header>
 
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <?php include('footer.php') ?>
+            <?php include('footer.html') ?>
         </div>
 
     </body>
