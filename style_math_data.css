@@ -5,89 +5,24 @@ GOOGLE FONT
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
     background-color: whitesmoke;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    min-width: 100%;
-}
-
-.content {
-    flex: 1 0 auto;
-}
-
-li, a, button, .footer {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 16px;
-    color: whitesmoke;
-    text-decoration: none;
+    background-image: initial;
+    background-size: initial;
+    background-position: initial;
+    background-attachment: initial;
+    background-repeat: initial;
 }
 
 /* MENU START */
 
 header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     background-color: rgba(42, 54, 59, 1);
     padding: 20px 10%;
-}
-
-.button-signin {
-    margin-left: 20px;
-}
-
-.button-signin button {
-    background-color: rgba(232, 74, 95, 1);
-    padding: 9px 25px;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-.button-signin button:hover {
-    background-color: rgba(232, 74, 95, 0.75);
-}
-
-.nav-links {
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav-links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover {
-    color: #ff847c;
 }
 
 /* MENU END */
@@ -143,45 +78,14 @@ header {
 /* FOOTER START */
 
 .footer {
-    flex: 0 0 auto;
     background-color: rgba(42, 54, 59, 1);
-    text-align: center;
-    padding: 8px 0;
-}
-
-.footer h3 {
-    margin: 6px 0;
-    font-weight: normal;  
-    font-size: 16px;
 }
 
 /* FOOTER END */
 
 @media (max-width: 768px) {
     header {
-        display: block;
-        padding-top: 10px;
         padding-bottom: 24px;
-    }
-
-    button, li, a {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .nav-links li {
-        display: block;
-        padding: 14px 0px;
-    }
-
-    .button-signin {
-        margin-left: 0px;
-    }
-
-    .button-signin button {
-        display: block;
-        width: 50%;
-        margin: 8px auto 0px;
     }
 
     .main {
@@ -191,9 +95,5 @@ header {
     .widget {
         margin: 10px;
         margin-bottom: 0px;
-    }
-
-    .footer h3 {
-        font-size: 18px;
     }
 }

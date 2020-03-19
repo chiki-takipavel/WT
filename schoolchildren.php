@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
         <meta charset='utf-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
         <div class="wrapper">
             <div class="content">
                 <header>
-                    <?php include('nav.html') ?>
+                    <?php include('nav.php') ?>
                     <a class="button-signin" href="signin.php"><button>Войти</button></a>    
                 </header>
 
