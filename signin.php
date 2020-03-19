@@ -11,7 +11,7 @@
     <div class="wrapper">
       <div class="content">
         <header>
-          <?php include('nav.php') ?>
+          <?php include('nav.html') ?>
         </header>
 
         <div class="signin">
