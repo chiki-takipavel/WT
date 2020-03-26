@@ -2,75 +2,75 @@
 GOOGLE FONT
 ============================================================ */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: whitesmoke;
-    background-image: initial;
-    background-size: initial;
-    background-position: initial;
-    background-attachment: initial;
-    background-repeat: initial;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+  background-image: initial;
+  background-size: initial;
+  background-position: initial;
+  background-attachment: initial;
+  background-repeat: initial;
 }
 
 /* MENU START */
 
 header {
-    background-color: rgba(42, 54, 59, 1);
-    padding: 20px 10%;
+  background-color: rgba(42, 54, 59, 1);
+  padding: 20px 10%;
 }
 
 /* MENU END */
 
 .main {
-    display: grid;
-    margin: 0px auto;
-    min-width: fit-content;
-    grid-template-columns: 22% 1fr;
+  display: grid;
+  margin: 0px auto;
+  min-width: fit-content;
+  grid-template-columns: 22% 1fr;
 }
 
 .widget {
-    height: fit-content;
-    background-color: rgba(42, 54, 59, 0.1);
-    padding: 10px 10px;
-    margin: 20px 0px 20px 20px;
-    font-family: 'Roboto';
-    font-weight: 400;
-    border-radius: 10px;
+  height: fit-content;
+  background-color: rgba(42, 54, 59, 0.1);
+  padding: 10px 10px;
+  margin: 20px 0px 20px 20px;
+  font-family: "Roboto";
+  font-weight: 400;
+  border-radius: 10px;
 }
 
 .widget-list {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 .widget-list a {
-    text-decoration: none;
-    outline: none;
-    display: block;
-    padding: 6px 0; 
-    letter-spacing: 1px;
-    color: black;
-    transition: all 0.3s ease 0s;
+  text-decoration: none;
+  outline: none;
+  display: block;
+  padding: 6px 0;
+  letter-spacing: 1px;
+  color: black;
+  transition: all 0.3s ease 0s;
 }
 
 .widget-list a:hover {
-    color: #ff847c;
+  color: #ff847c;
 }
 
 /* TOPIC START */
 
 .data {
-    padding: 20px 20px;
-    text-align: justify;
-    font-family: 'Roboto Slab';
-    font-weight: 400;
-    font-size: 16px;
+  padding: 20px 20px;
+  text-align: justify;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 16px;
 }
 
 /* TOPIC END */
@@ -78,22 +78,24 @@ header {
 /* FOOTER START */
 
 .footer {
-    background-color: rgba(42, 54, 59, 1);
+  background-color: rgba(42, 54, 59, 1);
 }
 
 /* FOOTER END */
 
 @media (max-width: 768px) {
-    header {
-        padding-bottom: 24px;
-    }
+  header {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 24px;
+  }
 
-    .main {
-        grid-template-columns: 1fr;   
-    }
+  .main {
+    grid-template-columns: 1fr;
+  }
 
-    .widget {
-        margin: 10px;
-        margin-bottom: 0px;
-    }
+  .widget {
+    margin: 10px;
+    margin-bottom: 0px;
+  }
 }

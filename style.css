@@ -2,95 +2,106 @@
 GOOGLE FONT
 ============================================================ */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Overpass');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Overpass");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url(assets/img/Background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(assets/img/Background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .content {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
-li, a, button, .footer {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 16px;
-    color: whitesmoke;
-    text-decoration: none;
+li,
+a,
+button,
+.footer {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 /* MENU START */
 
 header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
 }
 
 .button-signin {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .button-signin button {
-    background-color: rgba(232, 74, 95, 1);
-    padding: 9px 25px;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+  background-color: rgba(232, 74, 95, 1);
+  padding: 9px 25px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
 .button-signin button:hover {
-    background-color: rgba(232, 74, 95, 0.75);
+  background-color: rgba(232, 74, 95, 0.75);
 }
 
 .nav-links {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
+  display: inline-block;
+  padding: 0px 5px;
 }
 
 .nav-links li a {
-    transition: all 0.3s ease 0s;
+  padding: 9px 15px;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li .active {
+  background-color: rgba(245, 245, 245, 0.25);
+  border: none;
+  outline: none;
+  border-radius: 50px;
 }
 
 .nav-links li a:hover {
-    color: #ff847c;
+  color: #ff847c;
 }
 
 /* MENU END */
@@ -98,36 +109,36 @@ header {
 /* TITLE START */
 
 .home {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px; 
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .home-title {
-    display: inline;
-    vertical-align: middle;
-    font-family: 'Overpass';
-    font-weight: bold;
-    font-size: 80px;
-    color: whitesmoke;
-    font-weight: lighter;
+  display: inline;
+  vertical-align: middle;
+  font-family: "Overpass";
+  font-weight: bold;
+  font-size: 80px;
+  color: whitesmoke;
+  font-weight: lighter;
 }
 
 .training {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;     
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .training-title {
-    display: inline;
-    vertical-align: middle;
-    font-family: 'Roboto';
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 50px;
-    color: whitesmoke;
-    font-weight: lighter;
+  display: inline;
+  vertical-align: middle;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 50px;
+  color: whitesmoke;
+  font-weight: lighter;
 }
 
 /* TITLE END */
@@ -135,44 +146,44 @@ header {
 /* CHOOSE TRAINING START */
 
 .choose-training {
-    display: flex;
-    margin: 0px auto;
-    width: 50%;
-    min-width: fit-content;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  margin: 0px auto;
+  width: 50%;
+  min-width: fit-content;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .choose-training button {
-    background-color: rgba(254, 206, 168, 1);
-    color: #000000;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    width: 255px;
-    height: 255px;
+  background-color: rgba(254, 206, 168, 1);
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  width: 255px;
+  height: 255px;
 }
 
 .choose-training button h3 {
-    font-size: inherit;
+  font-size: inherit;
 }
 
 .choose-training img {
-    margin: 15px auto;
-    width: 38%;
-    height: 38%;
+  margin: 15px auto;
+  width: 38%;
+  height: 38%;
 }
 
 .item-training {
-    margin: 0px 30px;
+  margin: 0px 30px;
 }
 
 .choose-training button:hover {
-    background-color: rgba(254, 206, 168, 0.75);
+  background-color: rgba(254, 206, 168, 0.75);
 }
 
 /* CHOOSE TRAINING END */
@@ -180,38 +191,38 @@ header {
 /* CHOOSE TOPIC START */
 
 .choose-topic {
-    display: grid;
-    margin: 0px auto;
-    width: 70%;
-    min-width: fit-content;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  margin: 0px auto;
+  width: 70%;
+  min-width: fit-content;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .choose-topic button {
-    background-color: rgba(254, 206, 168, 1);
-    color: #000000;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    width: 225px;
-    height: 100px;
+  background-color: rgba(254, 206, 168, 1);
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  width: 225px;
+  height: 100px;
 }
 
 .choose-topic button h3 {
-    font-size: inherit;
+  font-size: inherit;
 }
 
 .choose-topic button:hover {
-    background-color: rgba(254, 206, 168, 0.75);
+  background-color: rgba(254, 206, 168, 0.75);
 }
 
 .item-topic {
-    margin: 15px 10px;
-    justify-self: center;
+  margin: 15px 10px;
+  justify-self: center;
 }
 
 /* CHOOSE TOPIC END */
@@ -219,180 +230,292 @@ header {
 /* SIGN IN START */
 
 .signin {
-    margin-top: 60px;
-    margin-bottom: 60px;     
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .signin-box {
-    width: 350px;
-    padding: 15px;
-    margin: 0px auto;
-    background-color: rgba(0, 0, 0, 0.3);
-    text-align: center;
+  width: 350px;
+  padding: 15px;
+  margin: 0px auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
-  
+
 .signin-box h1 {
-    color: whitesmoke;
-    text-transform: uppercase;
-    font-family: 'Roboto';
-    font-weight: 400;
-    margin: 20px auto;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: 400;
+  margin: 20px auto;
 }
-  
-.signin-box input[type = "text"], .signin-box input[type = "password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    font-family: 'Roboto';
-    font-size: 16px;
-    border: 2px solid rgba(254, 206, 168, 1);
-    padding: 14px 10px;
-    width: 250px;
-    outline: none;
-    color: whitesmoke;
-    border-radius: 24px;
-    transition: 0.25s;
+
+.signin-box input[type="text"],
+.signin-box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 16px;
+  border: 2px solid rgba(254, 206, 168, 1);
+  padding: 14px 10px;
+  width: 250px;
+  outline: none;
+  color: whitesmoke;
+  border-radius: 24px;
+  transition: 0.25s;
 }
-  
-.signin-box input[type = "text"]:focus, .signin-box input[type = "password"]:focus {
-    width: 280px;
-    border-color: #ff847c;
+
+.signin-box input[type="text"]:focus,
+.signin-box input[type="password"]:focus {
+  width: 280px;
+  border-color: #ff847c;
 }
-  
-.signin-box input[type = "submit"] {
-    border: 0;
-    background: rgba(232, 74, 95, 1);
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    font-family: 'Roboto';
-    font-size: 16px;
-    border: none;
-    padding: 14px 40px;
-    outline: none;
-    color: whitesmoke;
-    border-radius: 24px;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
+
+.signin-box input[type="submit"] {
+  border: 0;
+  background: rgba(232, 74, 95, 1);
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 16px;
+  border: none;
+  padding: 14px 40px;
+  outline: none;
+  color: whitesmoke;
+  border-radius: 24px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
-  
-.signin-box input[type = "submit"]:hover {
-    background: rgba(232, 74, 95, 0.75);
+
+.signin-box input[type="submit"]:hover {
+  background: rgba(232, 74, 95, 0.75);
 }
 
 /* SIGN IN END */
 
+/* ABOUT START */
+
+.about-wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 70%;
+  margin: 40px auto;
+}
+
+.about-content {
+  display: grid;
+  padding: 20px;
+  min-width: fit-content;
+  grid-template-columns: 255px 1fr;
+}
+
+.photo-side {
+  height: fit-content;
+  margin-right: 20px;
+}
+
+.photo-side img {
+  border-radius: 10px;
+  height: 235px;
+  width: 235px;
+}
+
+.info-side p {
+  color: whitesmoke;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+.info-side input[type="text"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px 0px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 16px;
+  border: 2px solid rgba(254, 206, 168, 1);
+  padding: 14px 10px;
+  width: 250px;
+  outline: none;
+  color: whitesmoke;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.info-side input[type="text"]:focus {
+  width: 280px;
+  border-color: #ff847c;
+}
+
+.info-side input[type="submit"] {
+  border: 0;
+  background: rgba(232, 74, 95, 1);
+  display: block;
+  margin: 20px 0px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 16px;
+  border: none;
+  padding: 14px 40px;
+  outline: none;
+  color: whitesmoke;
+  border-radius: 24px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.signin-box input[type="submit"]:hover {
+  background: rgba(232, 74, 95, 0.75);
+}
+
+/* ABOUT END */
+
 /* FOOTER START */
 
 .footer {
-    flex: 0 0 auto;
-    background-color: rgba(0, 0, 0, 0.3);
-    text-align: center;
-    padding: 8px 0;
+  flex: 0 0 auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 8px 0;
 }
 
 .footer h3 {
-    margin: 6px 0;
-    font-weight: normal;  
-    font-size: 16px;
+  margin: 6px 0;
+  font-weight: normal;
+  font-size: 16px;
 }
 
 /* FOOTER END */
 
 @media (max-width: 768px) {
-    header {
-        display: block;
-        padding-top: 10px;
-        padding-bottom: 0;
-    }
+  header {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
 
-    button, li, a {
-        font-size: 18px;
-        text-align: center;
-    }
+  button,
+  li,
+  a {
+    font-size: 18px;
+    text-align: center;
+  }
 
-    .nav-links li {
-        display: block;
-        padding: 14px 0px;
-    }
+  .nav-links li {
+    display: block;
+    padding: 14px 0px;
+  }
 
-    .button-signin {
-        margin-left: 0px;
-    }
+  .button-signin {
+    margin-left: 0px;
+  }
 
-    .button-signin button {
-        display: block;
-        width: 50%;
-        margin: 8px auto 0px;
-    }
+  .button-signin button {
+    display: block;
+    width: 50%;
+    margin: 8px auto 0px;
+  }
 
-    .home {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
+  .home {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
-    .home-title {
-        font-size: 13.5vw;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+  .home-title {
+    font-size: 13.5vw;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
-    .training {
-        margin-top: 30px;
-        margin-bottom: 30px; 
-    }
+  .training {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
-    .training-title {
-        font-size: 45px;
-    }
+  .training-title {
+    font-size: 45px;
+  }
 
-    .choose-training {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+  .choose-training {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-    .choose-training button {
-        font-size: inherit;
-        height: 235px;
-        width: 235px;
-    }
+  .choose-training button {
+    font-size: inherit;
+    height: 235px;
+    width: 235px;
+  }
 
-    .item-training {
-        margin: 0px auto 30px;
-    }
+  .item-training {
+    margin: 0px auto 30px;
+  }
 
-    .choose-topic {
-        grid-template-columns: 1fr; 
-    }
+  .choose-topic {
+    grid-template-columns: 1fr;
+  }
 
-    .choose-topic button {
-        width: 300px;
-    }
+  .choose-topic button {
+    width: 300px;
+  }
 
-    .item-topic {
-        margin: 0px auto 30px;
-    }
+  .item-topic {
+    margin: 0px auto 30px;
+  }
 
-    .signin {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
+  .signin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
-    .signin-box {
-        width: 320px;
-    }
+  .signin-box {
+    width: 320px;
+  }
 
-    .signin-box input[type = "text"], .signin-box input[type = "password"] {
-        width: 220px;    
-    }
+  .about-wrapper {
+    width: 100%;
+  }
 
-    .signin-box input[type = "text"]:focus, .signin-box input[type = "password"]:focus {
-        width: 250px;    
-    }
+  .about-content {
+    grid-template-columns: 1fr;
+  }
 
-    .footer h3 {
-        font-size: 18px;
-    }
+  .photo-side {
+    margin-right: 0;
+  }
+
+  .photo-side img {
+    display: block;
+    margin: 0px auto;
+    width: 200px;
+    height: 200px;
+  }
+
+  .info-side p {
+    display: block;
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .info-side input[type="text"] {
+    display: block;
+    margin: 20px auto 0px auto;
+  }
+
+  .info-side input[type="submit"] {
+    display: block;
+    margin: 20px auto 0px auto;
+  }
+
+  .footer h3 {
+    font-size: 18px;
+  }
 }
