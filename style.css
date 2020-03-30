@@ -168,7 +168,7 @@ header {
   height: 255px;
 }
 
-.choose-training button h3 {
+.choose-training button h2 {
   font-size: inherit;
 }
 
@@ -212,7 +212,7 @@ header {
   height: 100px;
 }
 
-.choose-topic button h3 {
+.choose-topic button h2 {
   font-size: inherit;
 }
 
@@ -386,7 +386,7 @@ header {
   padding: 8px 0;
 }
 
-.footer h3 {
+.footer h2 {
   margin: 6px 0;
   font-weight: normal;
   font-size: 16px;
@@ -515,7 +515,7 @@ header {
     margin: 20px auto 0px auto;
   }
 
-  .footer h3 {
+  .footer h2 {
     font-size: 18px;
   }
 }

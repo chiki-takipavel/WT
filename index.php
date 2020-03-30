@@ -24,13 +24,13 @@
                 <a class="item-training" href="schoolchildren.php">
                     <button>
                         <img src="assets/img/For schoolchildren.svg" alt="Parabola">
-                        <h3>Для школьников</h3>
+                        <h2>Для школьников</h2>
                     </button>
                 </a>
                 <a class="item-training" href="students.php">
                     <button>
                         <img src="assets/img/For students.svg" alt="Function">
-                        <h3>Для студентов</h3>
+                        <h2>Для студентов</h2>
                     </button>
                 </a>
             </div>
