@@ -27,6 +27,7 @@
                             <input type="text" name="cities" placeholder="Введите города" required />
                             <input type="submit" value="Отсортировать">
                         </form>
+                        <?php include('cities.php') ?>
                     </div>
                 </div>
             </div>
