@@ -24,7 +24,7 @@
                     <div class="info-side">
                         <p>Это просто лабораторная работа по веб-технологиям. Лучше введите названия городов через запятую.</p>
                         <form method="POST">
-                            <input type="text" name="cities" placeholder="Введите города" />
+                            <input type="text" name="cities" placeholder="Введите города" required />
                             <input type="submit" value="Отсортировать">
                         </form>
                         <?php include('cities.php') ?>
