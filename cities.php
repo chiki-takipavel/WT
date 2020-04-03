@@ -3,6 +3,8 @@ $response = '';
 $responseStyle = '';
 if (isset($_POST['cities'])) {
     $inputCities = $_POST['cities'];
+    $inputCities = htmlspecialchars($inputCities);
+    $inputCities = urldecode($inputCities);
     $patternCities = '/^([\s]*[A-Za-zА-ЯЁа-яё]+[-\s]?[A-Za-zА-ЯЁа-яё]+[\s]*)(,([\s]*[A-Za-zА-ЯЁа-яё]+[-\s]?[A-Za-zА-ЯЁа-яё]+[\s]*))*$/u';
 
     if (preg_match($patternCities, $inputCities)) {
