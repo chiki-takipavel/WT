@@ -12,7 +12,7 @@ else
             <li>
                 <?php
                 if ($key <> $url) { ?>
-                    <a href="<?= "/$key?url=$key" ?>"><?= $menuItem ?></a>
+                    <a href="<?= '/' . $key . '?url=' . $key ?>"><?= $menuItem ?></a>
                 <?php } elseif ($key == $url) { ?>
                     <a class="active" href="#"><?= $menuItem ?></a>
                 <?php }
