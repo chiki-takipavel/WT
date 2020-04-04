@@ -6,8 +6,8 @@ GOOGLE FONT
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
     width: 100%;
     background-color: whitesmoke;
@@ -45,7 +45,7 @@ header {
 }
 
 .widget-list {
-    padding: 0;
+    padding: 0px;
     list-style: none;
 }
 
@@ -53,7 +53,7 @@ header {
     text-decoration: none;
     outline: none;
     display: block;
-    padding: 6px 0;
+    padding: 6px 0px;
     letter-spacing: 1px;
     color: black;
     transition: all 0.3s ease 0s;
