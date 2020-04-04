@@ -19,10 +19,8 @@ if (isset($_POST['cities'])) {
         $arrayCities = array_unique($arrayCities);
         sort($arrayCities);
         $response = implode(', ', $arrayCities);
-    } elseif ($inputCities != '') {
+    } elseif (!empty($inputCities)) {
         $response = 'Неверный ввод!';
         $responseStyle = 'style="color: rgba(232, 74, 95, 1)"';
     }
 }
-?>
-<p <?= $responseStyle ?>><?= $response ?></p>
