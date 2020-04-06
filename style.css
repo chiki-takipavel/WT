@@ -2,25 +2,25 @@
 GOOGLE FONT
 ============================================================ */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Overpass');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Overpass");
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 html {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
     width: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
     width: 100%;
     background-image: url(assets/img/Background.jpg);
@@ -41,12 +41,58 @@ body {
     flex: 1 0 auto;
 }
 
-li, a, button, .footer {
-    font-family: 'Roboto';
+li,
+a,
+button,
+.footer {
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 16px;
     color: whitesmoke;
     text-decoration: none;
+}
+
+input[type="text"] {
+    border: 0px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    border: 2px solid rgba(254, 206, 168, 1);
+    padding: 14px 10px;
+    width: 250px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+input[type="text"]:focus {
+    width: 280px;
+    border-color: #ff847c;
+}
+
+input[type="submit"] {
+    border: 0px;
+    background: rgba(232, 74, 95, 1);
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    border: none;
+    padding: 14px 40px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: rgba(232, 74, 95, 0.75);
 }
 
 /* MENU START */
@@ -59,12 +105,12 @@ header {
 }
 
 .button-signin {
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .button-signin button {
     background-color: rgba(232, 74, 95, 1);
-    padding: 9px 25px;
+    padding: 9px 20px;
     border: none;
     outline: none;
     border-radius: 50px;
@@ -82,11 +128,20 @@ header {
 
 .nav-links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 15px;
 }
 
 .nav-links li a {
+    padding: 0px 10px;
     transition: all 0.3s ease 0s;
+}
+
+.nav-links li .active {
+    padding: 9px 20px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .nav-links li a:hover {
@@ -100,13 +155,13 @@ header {
 .home {
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 .home-title {
     display: inline;
     vertical-align: middle;
-    font-family: 'Overpass';
+    font-family: "Overpass";
     font-weight: bold;
     font-size: 80px;
     color: whitesmoke;
@@ -116,13 +171,13 @@ header {
 .training {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px;     
+    margin-bottom: 20px;
 }
 
 .training-title {
     display: inline;
     vertical-align: middle;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     text-transform: uppercase;
     font-weight: bold;
     font-size: 50px;
@@ -157,7 +212,7 @@ header {
     height: 255px;
 }
 
-.choose-training button h3 {
+.choose-training button h2 {
     font-size: inherit;
 }
 
@@ -201,7 +256,7 @@ header {
     height: 100px;
 }
 
-.choose-topic button h3 {
+.choose-topic button h2 {
     font-size: inherit;
 }
 
@@ -219,70 +274,60 @@ header {
 /* SIGN IN START */
 
 .signin {
-    margin-top: 60px;
-    margin-bottom: 60px;     
-}
-
-.signin-box {
     width: 350px;
     padding: 15px;
-    margin: 0px auto;
+    margin: 60px auto;
     background-color: rgba(0, 0, 0, 0.3);
-    text-align: center;
 }
-  
-.signin-box h1 {
+
+.signin-content h1 {
     color: whitesmoke;
     text-transform: uppercase;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     margin: 20px auto;
-}
-  
-.signin-box input[type = "text"], .signin-box input[type = "password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
     text-align: center;
-    font-family: 'Roboto';
-    font-size: 16px;
-    border: 2px solid rgba(254, 206, 168, 1);
-    padding: 14px 10px;
-    width: 250px;
-    outline: none;
-    color: whitesmoke;
-    border-radius: 24px;
-    transition: 0.25s;
-}
-  
-.signin-box input[type = "text"]:focus, .signin-box input[type = "password"]:focus {
-    width: 280px;
-    border-color: #ff847c;
-}
-  
-.signin-box input[type = "submit"] {
-    border: 0;
-    background: rgba(232, 74, 95, 1);
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    font-family: 'Roboto';
-    font-size: 16px;
-    border: none;
-    padding: 14px 40px;
-    outline: none;
-    color: whitesmoke;
-    border-radius: 24px;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-}
-  
-.signin-box input[type = "submit"]:hover {
-    background: rgba(232, 74, 95, 0.75);
 }
 
 /* SIGN IN END */
+
+/* ABOUT START */
+
+.about-wrapper {
+    width: 70%;
+    margin: 60px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 255px 1fr;
+}
+
+.about-content .photo-side,
+.about-content .info-side {
+    padding: 15px;
+    margin: 0px auto;
+}
+
+.about-content .photo-side img {
+    width: 225px;
+    height: 225px;
+    border-radius: 10px;
+}
+
+.about-content .info-side p {
+    color: whitesmoke;
+    font-family: "Roboto";
+    font-weight: 400;
+    text-align: justify;
+}
+
+.about-content .info-side input {
+    margin: 20px 0px;
+}
+
+/* ABOUT END */
 
 /* FOOTER START */
 
@@ -290,12 +335,12 @@ header {
     flex: 0 0 auto;
     background-color: rgba(0, 0, 0, 0.3);
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 0px;
 }
 
-.footer h3 {
-    margin: 6px 0;
-    font-weight: normal;  
+.footer h2 {
+    margin: 6px 0px;
+    font-weight: normal;
     font-size: 16px;
 }
 
@@ -305,10 +350,12 @@ header {
     header {
         display: block;
         padding-top: 10px;
-        padding-bottom: 0;
+        padding-bottom: 0px;
     }
 
-    button, li, a {
+    button,
+    li,
+    a {
         font-size: 18px;
         text-align: center;
     }
@@ -325,7 +372,7 @@ header {
     .button-signin button {
         display: block;
         width: 50%;
-        margin: 8px auto 0px;
+        margin: 6px auto 0px;
     }
 
     .home {
@@ -341,7 +388,7 @@ header {
 
     .training {
         margin-top: 30px;
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
     }
 
     .training-title {
@@ -364,7 +411,7 @@ header {
     }
 
     .choose-topic {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .choose-topic button {
@@ -378,21 +425,32 @@ header {
     .signin {
         margin-top: 30px;
         margin-bottom: 30px;
+        width: 100%;
     }
 
-    .signin-box {
-        width: 320px;
+    .about-wrapper {
+        margin: 30px auto;
+        width: 100%;
     }
 
-    .signin-box input[type = "text"], .signin-box input[type = "password"] {
-        width: 220px;    
+    .about-content {
+        grid-template-columns: 1fr;
     }
 
-    .signin-box input[type = "text"]:focus, .signin-box input[type = "password"]:focus {
-        width: 250px;    
+    .about-content .photo-side {
+        padding-bottom: 0px;
     }
 
-    .footer h3 {
+    .about-content .info-side p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .about-content .info-side input {
+        margin: 20px auto;
+    }
+
+    .footer h2 {
         font-size: 18px;
     }
 }
