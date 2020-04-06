@@ -5,16 +5,15 @@ $page = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 
 
 <nav>
     <ul class="nav-links">
-        <?php foreach ($menu as $key => $menuItem) { ?>
-            <li>
-                <?php
-                if ($key <> $page) {
-                    echo '<a href="/' . $key . '">' . $menuItem . '</a>';
-                } else {
-                    echo '<a class="active" href="#">' . $menuItem . '</a>';
-                }
-                ?>
-            </li>
-        <?php } ?>
+        <?php foreach ($menu as $key => $menuItem) {
+            echo '<li>';
+            if ($key <> $page) {
+                echo '<a href="/' . $key . '">' . $menuItem . '</a>';
+            } else {
+                echo '<a class="active" href="#">' . $menuItem . '</a>';
+            }
+            echo '</li>';
+        }
+        ?>
     </ul>
 </nav>
