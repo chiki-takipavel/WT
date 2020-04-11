@@ -1,23 +1,19 @@
 <?php
 $menu = array('index.php' => 'Главная', 'about.php' => 'О проекте');
-if (isset($_GET['url']))
-    $url = $_GET['url'];
-else
-    $url = '';
+$page = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
 ?>
 
 <nav>
     <ul class="nav-links">
-        <?php foreach ($menu as $key => $menuItem) : ?>
-            <li>
-                <?php
-                if ($key <> $url) { ?>
-                    <a href="<?= "/$key?url=$key" ?>"><?= $menuItem ?></a>
-                <?php } elseif ($key == $url) { ?>
-                    <a class="active" href="#"><?= $menuItem ?></a>
-                <?php }
-                ?>
-            </li>
-        <?php endforeach; ?>
+        <?php foreach ($menu as $key => $menuItem) {
+            echo '<li>';
+            if ($key <> $page) {
+                echo '<a href="/' . $key . '">' . $menuItem . '</a>';
+            } else {
+                echo '<a class="active" href="#">' . $menuItem . '</a>';
+            }
+            echo '</li>';
+        }
+        ?>
     </ul>
 </nav>
