@@ -321,6 +321,7 @@ header {
     font-family: "Roboto";
     font-weight: 400;
     text-align: justify;
+    text-decoration: none;
 }
 
 .about-content .info-side input {
@@ -328,6 +329,65 @@ header {
 }
 
 /* ABOUT END */
+
+/* PRODUCTS START */
+
+.products-wrapper {
+    width: 70%;
+    margin: 60px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.products-content {
+    display: grid;
+    grid-template-columns: 310px 1fr 1fr;
+}
+
+.products-content .add-side,
+.products-content .list-side,
+.products-content .info-side {
+    padding: 15px;
+}
+
+.products-content .add-side input[type="text"] {
+    margin-top: 0px;
+}
+
+.products-content .add-side input[type="submit"] {
+    margin-bottom: 0px;
+}
+
+.products-content .add-side p,
+.products-content .info-side p {
+    color: whitesmoke;
+    font-family: "Roboto";
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}
+
+.products-content .list-side li {
+    display: block;
+    padding-bottom: 8px;
+}
+
+.products-content .list-side li a {
+    transition: all 0.3s ease 0s;
+}
+
+.products-content .list-side li a:hover {
+    color: #ff847c;
+}
+
+.products-content .add-side p {
+    margin-top: 15px;
+}
+
+.products-content .info-side p {
+    text-align: justify;
+}
+
+/* PRODUCTS END */
 
 /* FOOTER START */
 
@@ -354,6 +414,7 @@ header {
     }
 
     button,
+    input,
     li,
     a {
         font-size: 18px;
@@ -428,7 +489,8 @@ header {
         width: 100%;
     }
 
-    .about-wrapper {
+    .about-wrapper,
+    .products-wrapper {
         margin: 30px auto;
         width: 100%;
     }
@@ -438,11 +500,42 @@ header {
     }
 
     .about-content .photo-side {
+        margin: 20px auto;
         padding-bottom: 0px;
     }
 
     .about-content .info-side p {
         font-size: 18px;
+        text-align: center;
+    }
+
+    .products-content {
+        grid-template-areas:
+            "add-item add-item"
+            "list info";
+        grid-template-rows: repeat(2, fit-content);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-content .add-side {
+        grid-area: add-item;
+    }
+
+    .products-content .list-side {
+        grid-area: list;
+        padding-top: 0px;
+    }
+
+    .products-content .list-side li a {
+        font-size: 16px;
+    }
+
+    .products-content .info-side {
+        grid-area: info;
+        padding-top: 0px;
+    }
+
+    .products-content .info-side p {
         text-align: center;
     }
 
