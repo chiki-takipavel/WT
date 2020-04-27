@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Апр 27 2020 г., 17:12
+-- Время создания: Апр 27 2020 г., 17:40
 -- Версия сервера: 5.7.29-0ubuntu0.18.04.1
 -- Версия PHP: 7.4.5
 
@@ -39,8 +39,9 @@ CREATE TABLE `Users` (
 --
 
 INSERT INTO `Users` (`user_id`, `user_name`, `user_email`) VALUES
-(7, 'Паша', 'chiki-takipavel@mail.ru'),
-(6, 'Андрей', 'chikitakipavel08082001@gmail.com');
+(8, 'Паша', 'miskevichpavel@mail.ru'),
+(9, 'Илья', 'ilya2001@gmail.com'),
+(10, 'miskevich', 'miskevich@bsuir.by');
 
 --
 -- Индексы сохранённых таблиц
@@ -61,7 +62,7 @@ ALTER TABLE `Users`
 -- AUTO_INCREMENT для таблицы `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
