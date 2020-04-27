@@ -55,6 +55,21 @@ if (isset($_POST['userName']) && isset($_POST['userEmail'])) {
 
     if (emailIsValid($itemUser['email'])) {
         if (usernameIsValid($itemUser['name'])) {
+            $dbHost = 'localhost';
+            $dbUser = '***';
+            $dbPassword = '***';
+            $dbName = 'LW5-N6';
+            $dbLink = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
+            if (mysqli_connect_errno()) {
+                $response = 'Ошибка подключения!';
+            } else {
+                mysqli_set_charset($dbLink, 'UTF8');
+                $query = 'INSERT INTO `Users` (`user_name`, `user_email`) 
+                VALUES ("' . $itemUser['name'] . '", "' . $itemUser['email'] . '")';
+                mysqli_query($dbLink, $query);
+                mysqli_close($dbLink);
+            }
+            /*
             $fileName = 'assets/files/users.txt';
             $listUsers = openUsersList($fileName, $keys);
             if (!isUserExists($listUsers, $itemUser['email'])) {
@@ -64,6 +79,7 @@ if (isset($_POST['userName']) && isset($_POST['userEmail'])) {
             } else {
                 $response = 'Пользователь с таким e-mail уже существует!';
             }
+            */
         } else {
             $response = 'Неверно указано имя пользователя! Минимальная длина - 3 символа, максимальная - 32. 
                         Допустимые символы: буквы, цифры и нижнее подчёркивание или дефис внутри имени.';
