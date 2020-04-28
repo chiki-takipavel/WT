@@ -22,7 +22,7 @@
                         <img class="photo-developer" src="assets/img/Developer.jpg" alt="Developer"></img>
                     </div>
                     <div class="info-side">
-                        <?php include('cities.php') ?>
+                        <?php include('scripts/cities.php') ?>
                         <p>Это просто лабораторная работа по веб-технологиям. Лучше введите названия городов через запятую.</p>
                         <form method="POST">
                             <input type="text" name="cities" placeholder="Введите города" />

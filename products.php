@@ -18,7 +18,7 @@
 
             <div class="products-wrapper">
                 <div class="products-content">
-                    <?php include('goods.php') ?>
+                    <?php include('scripts/goods.php') ?>
                     <div class="add-side">
                         <form method="POST">
                             <input type="text" name="productID" placeholder="ID товара" required />

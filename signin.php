@@ -16,7 +16,7 @@
       </header>
 
       <div class="signin">
-        <?php include('users.php') ?>
+        <?php include('scripts/users.php') ?>
         <h1>Идентификация</h1>
         <form class="signin-content" method="post">
           <input type="text" name="userName" placeholder="Ваше имя" required />
