@@ -55,11 +55,8 @@ if (isset($_POST['userName']) && isset($_POST['userEmail'])) {
 
     if (emailIsValid($itemUser['email'])) {
         if (usernameIsValid($itemUser['name'])) {
-            $dbHost = 'localhost';
-            $dbUser = '***';
-            $dbPassword = '***';
             $dbName = 'LW5-N6';
-            $dbLink = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
+            $dbLink = mysqli_connect($_SERVER['DB_HOST'], $_SERVER['DB_USER'], $_SERVER['DB_PASSWORD'], $dbName);
             if (mysqli_connect_errno()) {
                 $response = 'Ошибка подключения!';
             } else {
