@@ -16,42 +16,38 @@ if (isset($_POST['recipients']) && isset($_POST['subject']) && isset($_POST['mes
     $messsage = $_POST['message'];
 
     $mail = new PHPMailer();
+    $mail->setLanguage('ru', 'scripts/PHPMailer/language/');
+    $mail->CharSet = 'UTF-8';
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
+    $mail->Host = $_SERVER['MAIL_HOST'];
+    $mail->Username = $_SERVER['MAIL_USER'];
+    $mail->Password = $_SERVER['MAIL_PASSWORD'];
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
 
-    try {
-        $mail->CharSet = 'UTF-8';
-        $mail->isSMTP();
-        $mail->SMTPAuth = true;
-        $mail->Host = $_SERVER['MAIL_HOST'];
-        $mail->Username = $_SERVER['MAIL_USER'];
-        $mail->Password = $_SERVER['MAIL_PASSWORD'];
-        $mail->SMTPSecure = 'ssl';
-        $mail->Port = 465;
+    $arrayRecipients = $mail->parseAddresses($recipients);
 
-        $arrayRecipients = $mail->parseAddresses($recipients);
-        foreach ($arrayRecipients as $recipient) {
-            $mail->addAddress($recipient['address'], $recipient['name']);
-        }
-
-        $emailSender = $_SERVER['MAIL_USER'];
-        $emailName = 'Павел Мискевич';
-        $mail->isHTML(true);
-        $mail->setFrom($emailSender, $emailName);
-        $mail->Subject = $subject;
-        $mail->Body = $messsage;
-
-        if ($mail->send()) {
-            $fileName = '../assets/files/recipients.csv';
-            $fileRecipients = fopen($fileName, 'a+');
-            foreach ($arrayRecipients as $recipient) {
-                fputcsv($fileRecipients, $recipient);
-            }
-            fclose($fileRecipients);
-        } else {
-            $isError = true;
-            $errorMail = 'Сообщение не было отправлено!';
-        };
-    } catch (Exception $ex) {
-        $isError = true;
-        $errorMail = 'Сообщение не было отправлено!' . $mail->ErrorInfo;
+    foreach ($arrayRecipients as $recipient) {
+        $mail->addAddress($recipient['address'], $recipient['name']);
     }
+
+    $emailSender = $_SERVER['MAIL_USER'];
+    $emailName = 'Павел Мискевич';
+    $mail->isHTML(true);
+    $mail->setFrom($emailSender, $emailName);
+    $mail->Subject = $subject;
+    $mail->Body = $messsage;
+
+    if ($mail->send()) {
+        $fileName = 'assets/files/recipients.csv';
+        $fileRecipients = fopen($fileName, 'w+');
+        foreach ($arrayRecipients as $recipient) {
+            fputcsv($fileRecipients, $recipient);
+        }
+        fclose($fileRecipients);
+    } else {
+        $isError = true;
+        $errorMail = 'Сообщение не было отправлено! ' . $mail->ErrorInfo;
+    };
 }
