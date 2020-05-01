@@ -22,7 +22,7 @@
                         <hr>
                     </th>
                 </tr>
-                <?php include('scripts/os-table.php') ?>
+                <?php include('scripts/os_table.php') ?>
                 <tr>
                     <th colspan="2">
                         <hr>
