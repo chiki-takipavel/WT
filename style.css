@@ -280,7 +280,14 @@ header {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.signin-content h1 {
+.signin p {
+    font-family: "Roboto";
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}
+
+.signin h1 {
     color: whitesmoke;
     text-transform: uppercase;
     font-family: "Roboto";
