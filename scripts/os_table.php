@@ -1,9 +1,7 @@
 <?php
 $dbName = 'LW8-OS';
 $dbLink = mysqli_connect($_SERVER['DB_HOST'], $_SERVER['DB_USER'], $_SERVER['DB_PASSWORD'], $dbName);
-if (mysqli_connect_errno()) {
-    echo "Не удалось подключиться к MySQL: " . mysqli_connect_error();
-} else {
+if ($dbLink) {
     mysqli_set_charset($dbLink, 'UTF8');
 
     $query = 'SELECT `os_name`, `os_users_count` FROM `OS`
@@ -21,4 +19,6 @@ if (mysqli_connect_errno()) {
     }
 
     mysqli_close($dbLink);
+} else {
+    echo "Не удалось подключиться к MySQL: " . mysqli_connect_error();
 }
