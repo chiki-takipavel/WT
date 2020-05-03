@@ -14,7 +14,7 @@ if (isset($_POST['recipients']) && isset($_POST['subject']) && isset($_POST['mes
     $messsage = $_POST['message'];
 
     $mail = new PHPMailer();
-    $mail->setLanguage('ru', 'scripts/PHPMailer/language/');
+    $mail->setLanguage('ru', 'vendor/phpmailer/phpmailer/language/');
     $mail->CharSet = 'UTF-8';
     $mail->isSMTP();
     $mail->SMTPAuth = true;
