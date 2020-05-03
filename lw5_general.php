@@ -22,7 +22,7 @@
                         <hr>
                     </th>
                 </tr>
-                <?php include('lw5_general_db.php'); ?>
+                <?php include('scripts/lw5_general_db.php'); ?>
                 <tr>
                     <th colspan="3">
                         <hr>

@@ -57,14 +57,16 @@ if (isset($_POST['userName']) && isset($_POST['userEmail'])) {
         if (usernameIsValid($itemUser['name'])) {
             $dbName = 'LW5-N6';
             $dbLink = mysqli_connect($_SERVER['DB_HOST'], $_SERVER['DB_USER'], $_SERVER['DB_PASSWORD'], $dbName);
-            if (mysqli_connect_errno()) {
-                $response = 'Ошибка подключения!';
-            } else {
+            if ($dbLink) {
                 mysqli_set_charset($dbLink, 'UTF8');
+                $itemUser['name'] = mysqli_real_escape_string($dbLink, $itemUser['name']);
+                $itemUser['email'] = mysqli_real_escape_string($dbLink, $itemUser['email']);
                 $query = 'INSERT INTO `Users` (`user_name`, `user_email`) 
                 VALUES ("' . $itemUser['name'] . '", "' . $itemUser['email'] . '")';
                 mysqli_query($dbLink, $query);
                 mysqli_close($dbLink);
+            } else {
+                $response = 'Ошибка подключения!';
             }
             /*
             $fileName = 'assets/files/users.txt';
