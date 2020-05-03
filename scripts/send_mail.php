@@ -7,9 +7,7 @@ $errorMailStyle = 'style="color: rgba(232, 74, 95, 1)"';
 $isError = false;
 
 if (isset($_POST['recipients']) && isset($_POST['subject']) && isset($_POST['message'])) {
-    require 'PHPMailer/PHPMailer.php';
-    require 'PHPMailer/SMTP.php';
-    require 'PHPMailer/Exception.php';
+    require 'vendor/autoload.php';
 
     $recipients = $_POST['recipients'];
     $subject = $_POST['subject'];
