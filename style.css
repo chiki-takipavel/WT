@@ -52,7 +52,13 @@ button,
     text-decoration: none;
 }
 
-input[type="text"] {
+textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+input[type="text"],
+textarea {
     border: 0px;
     background: none;
     display: block;
@@ -69,7 +75,8 @@ input[type="text"] {
     transition: 0.25s;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+textarea:focus {
     width: 280px;
     border-color: #ff847c;
 }
@@ -329,10 +336,19 @@ header {
     font-weight: 400;
     text-align: justify;
     text-decoration: none;
+    margin-bottom: 14px;
 }
 
-.about-content .info-side input {
+.about-content .info-side input,
+.about-content .info-side textarea {
     margin: 20px 0px;
+}
+
+.about-content .info-side input[type="text"],
+.about-content .info-side textarea,
+.about-content .info-side input[type="text"]:focus,
+.about-content .info-side textarea:focus {
+    width: 70%;
 }
 
 /* ABOUT END */
@@ -422,6 +438,7 @@ header {
 
     button,
     input,
+    textarea,
     li,
     a {
         font-size: 18px;
@@ -546,7 +563,8 @@ header {
         text-align: center;
     }
 
-    .about-content .info-side input {
+    .about-content .info-side input,
+    .about-content .info-side textarea {
         margin: 20px auto;
     }
 
