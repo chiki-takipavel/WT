@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <?php include('scripts/add_os.php') ?>
     <div class="wrapper">
         <div class="content">
             <h1>История посещений</h1>
@@ -22,7 +23,9 @@
                     </th>
                 </tr>
                 <?php
-                session_start();
+                if (session_status() == PHP_SESSION_NONE) {
+                    session_start();
+                }
                 foreach ($_SESSION['history'] as $row) {
                     echo '<tr>';
                     echo '<td>' . date('d.m.Y H:i', $row['time']) . '</td>';

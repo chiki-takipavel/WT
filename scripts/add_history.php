@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 $page = substr($_SERVER['SCRIPT_NAME'], strpos($_SERVER['SCRIPT_NAME'], '/') + 1);
 if (isset($_SESSION['history'])) {
     $_SESSION['history'][] = array('time' => time(), 'page' => $page);
