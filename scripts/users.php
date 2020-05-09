@@ -55,6 +55,20 @@ if (isset($_POST['userName']) && isset($_POST['userEmail'])) {
 
     if (emailIsValid($itemUser['email'])) {
         if (usernameIsValid($itemUser['name'])) {
+            $dbName = 'LW5-N6';
+            $dbLink = mysqli_connect($_SERVER['DB_HOST'], $_SERVER['DB_USER'], $_SERVER['DB_PASSWORD'], $dbName);
+            if ($dbLink) {
+                mysqli_set_charset($dbLink, 'UTF8');
+                $itemUser['name'] = mysqli_real_escape_string($dbLink, $itemUser['name']);
+                $itemUser['email'] = mysqli_real_escape_string($dbLink, $itemUser['email']);
+                $query = 'INSERT INTO `Users` (`user_name`, `user_email`) 
+                VALUES ("' . $itemUser['name'] . '", "' . $itemUser['email'] . '")';
+                mysqli_query($dbLink, $query);
+                mysqli_close($dbLink);
+            } else {
+                $response = 'Ошибка подключения!';
+            }
+            /*
             $fileName = 'assets/files/users.txt';
             $listUsers = openUsersList($fileName, $keys);
             if (!isUserExists($listUsers, $itemUser['email'])) {
@@ -64,6 +78,7 @@ if (isset($_POST['userName']) && isset($_POST['userEmail'])) {
             } else {
                 $response = 'Пользователь с таким e-mail уже существует!';
             }
+            */
         } else {
             $response = 'Неверно указано имя пользователя! Минимальная длина - 3 символа, максимальная - 32. 
                         Допустимые символы: буквы, цифры и нижнее подчёркивание или дефис внутри имени.';
