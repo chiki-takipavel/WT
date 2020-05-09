@@ -4,29 +4,27 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Лабораторная работа 5. Основное задание</title>
+    <title>Операционные системы пользователей</title>
 </head>
 
 <body>
-    <?php include('scripts/add_history.php'); ?>
     <?php include('scripts/add_os.php') ?>
     <div class="wrapper">
         <div class="content">
-            <h1>Лабораторная работа 5. Основное задание</h1>
+            <h1>Операционные системы пользователей</h1>
             <table>
                 <tr>
-                    <th>Имя автора</th>
-                    <th>Статья</th>
-                    <th>Дата публикации</th>
+                    <th>Операционная система</th>
+                    <th>Количество пользователей</th>
                 </tr>
                 <tr>
-                    <th colspan="3">
+                    <th colspan="2">
                         <hr>
                     </th>
                 </tr>
-                <?php include('scripts/lw5_general_db.php'); ?>
+                <?php include('scripts/os_table.php') ?>
                 <tr>
-                    <th colspan="3">
+                    <th colspan="2">
                         <hr>
                     </th>
                 </tr>
