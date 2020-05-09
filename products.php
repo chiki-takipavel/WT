@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <?php include('scripts/add_history.php'); ?>
     <div class="wrapper">
         <div class="content">
             <header>
@@ -18,7 +19,7 @@
 
             <div class="products-wrapper">
                 <div class="products-content">
-                    <?php include('goods.php') ?>
+                    <?php include('scripts/goods.php') ?>
                     <div class="add-side">
                         <form method="POST">
                             <input type="text" name="productID" placeholder="ID товара" required />

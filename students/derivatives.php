@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <?php include('../scripts/add_history.php'); ?>
     <div class="wrapper">
         <div class="content">
             <header>
