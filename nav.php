@@ -1,6 +1,6 @@
 <?php
 $menu = array('index.php' => 'Главная', 'products.php' => 'Товары', 'about.php' => 'О проекте');
-$page = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
+$page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/') + 1);
 ?>
 
 <nav>
